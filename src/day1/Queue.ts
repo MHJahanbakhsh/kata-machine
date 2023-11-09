@@ -14,13 +14,12 @@ export default class Queue<T> {
         this.length = 0;
     }
 
-    //someone enetered at the end of queue
+    //someone entered at the end of queue
     enqueue(item: T): void {
         const node = { value: item } as QNode<T>;
         this.length++;
         if (!this.tail) {
             this.tail = this.head = node;
-            console.log("first run ", this.head);
 
             return;
         }

@@ -20,7 +20,7 @@ export default class Queue<T> {
         this.length++;
         if (!this.tail) {
             this.tail = this.head = node;
-            console.log('first run ',this.head);
+            console.log("first run ", this.head);
 
             return;
         }

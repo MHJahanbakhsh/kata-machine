@@ -20,6 +20,8 @@ export default class Queue<T> {
         this.length++;
         if (!this.tail) {
             this.tail = this.head = node;
+            console.log('first run ',this.head);
+
             return;
         }
         //think about tail as a floating pointer outside of the queue itself
@@ -55,4 +57,4 @@ myq.enqueue(3);
 myq.enqueue(4);
 myq.enqueue(5);
 myq.enqueue(6);
-console.log(myq);
+// console.log(myq);

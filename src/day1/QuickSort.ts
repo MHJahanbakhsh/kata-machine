@@ -3,6 +3,8 @@
 //other elements to its right(which they are also less than pivot but there is no guarantee if the first is less than them)
 //and thats the whole point actually. we keep going until a partition is left with 3 values. and they are definitely sorted.
 const arr = [1,2,5,4,-1,-2,3]
+
+//on each iteration, pivot itself is the one who gets sorted
 function partition(arr:number[],low:number,high:number):number{
     const pivot = arr[high]
     let idx = low-1
@@ -20,7 +22,7 @@ function partition(arr:number[],low:number,high:number):number{
     idx++
     arr[high] = arr[idx]
     arr[idx] = pivot
-    return idx //we ise this as the next pivot
+    return idx //we use this as the next pivot
 }
 
 function qs(arr:number[],lo:number,hi:number):void{
@@ -38,4 +40,6 @@ export default function quick_sort(arr: number[]): void {
     qs(arr,0,arr.length-1)
 }
 
-console.log(quick_sort(arr))
+
+quick_sort(arr)
+console.log(arr)

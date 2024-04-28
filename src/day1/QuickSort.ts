@@ -20,7 +20,7 @@ function partition(arr:number[],low:number,high:number):number{
     idx++
     arr[high] = arr[idx]
     arr[idx] = pivot
-    return idx //we ise this as the next pivot
+    return idx //we use this as the next pivot
 }
 
 function qs(arr:number[],lo:number,hi:number):void{
@@ -37,5 +37,6 @@ export default function quick_sort(arr: number[]): void {
     //shit we are using last item as the first pivot
     qs(arr,0,arr.length-1)
 }
+
 
 console.log(quick_sort(arr))

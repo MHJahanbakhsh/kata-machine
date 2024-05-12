@@ -37,6 +37,3 @@ export default function quick_sort(arr: number[]): void {
     //shit we are using last item as the first pivot
     qs(arr,0,arr.length-1)
 }
-
-
-console.log(quick_sort(arr))
